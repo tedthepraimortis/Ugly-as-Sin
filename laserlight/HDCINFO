@@ -1,0 +1,7 @@
+// Laserlight Spawn Table Entries
+newSpawnTable => { "spawnName": "HDAmBox", "tableName": "UaS.AmmoBoxSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.AmmoBoxSpawns", "name": "UaS_LaserLightModule", "chance": "85", "replaces": "false" }
+newSpawnTable => { "spawnName": "HDBackpack", "tableName": "UaS.BackpackSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.BackpackSpawns", "name": "UaS_LaserLightModule", "chance": "85", "replaces": "false" }
+newSpawnTable => { "spawnName": "PortableLiteAmp", "tableName": "UaS.InfraredSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.InfraredSpawns", "name": "UaS_LaserLightModule", "chance": "85", "replaces": "false" }

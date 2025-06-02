@@ -1,0 +1,6 @@
+// Allied Marines Spawn Table Entries
+addSpawnTableSingleEntry => { "tableName": "DeadMarineReplaces", "name": "HDOperator", "weight": "#UaS_AllySpawnRate" }
+addSpawnTableSingleEntry => { "tableName": "GibbedMarineReplaces", "name": "HDOperator", "weight": "#UaS_AllySpawnRate" }
+addSpawnTableSingleEntry => { "tableName": "GibbedMarineExtraReplaces", "name": "HDOperator", "weight": "#UaS_AllySpawnRate" }
+addSpawnTableSingleEntry => { "tableName": "DeadZombieManReplaces", "name": "HDOperator", "weight": "#UaS_AllySpawnRate" }
+addSpawnTableSingleEntry => { "tableName": "DeadShotgunGuyReplaces", "name": "HDOperator", "weight": "#UaS_AllySpawnRate" }

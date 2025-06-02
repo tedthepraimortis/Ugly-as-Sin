@@ -1,0 +1,25 @@
+// Gyro Stabilizer Spawn Table Entries
+newSpawnTable => { "spawnName": "StabilizerRandom" }
+addSpawnTableSingleEntry => { "tableName": "StabilizerRandom", "name": "UaS_GyroStabilizer", "weight": "2" }
+addSpawnTableSingleEntry => { "tableName": "StabilizerRandom", "name": "UaS_WeaponSling", "weight": "1" }
+
+newSpawnTable => { "spawnName": "HDSMG", "tableName": "UaS.SMGSpawns", "replaces": "false" }
+addSpawnTableNestedEntry => { "tableName": "UaS.SMGSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+newSpawnTable => { "spawnName": "Hunter", "tableName": "UaS.HunterSpawns", "replaces": "false" }
+addSpawnTableNestedEntry => { "tableName": "UaS.HunterSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+newSpawnTable => { "spawnName": "Slayer", "tableName": "UaS.SlayerSpawns", "replaces": "false" }
+addSpawnTableNestedEntry => { "tableName": "UaS.SlayerSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+newSpawnTable => { "spawnName": "ZM66AssaultRifle", "tableName": "UaS.ZM66Spawns", "replaces": "false" }
+addSpawnTableNestedEntry => { "tableName": "UaS.ZM66Spawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+newSpawnTable => { "spawnName": "ZM66Semi", "tableName": "UaS.ZM66SemiSpawns", "replaces": "false" }
+addSpawnTableNestedEntry => { "tableName": "UaS.ZM66SemiSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+newSpawnTable => { "spawnName": "ZM66Regular", "tableName": "UaS.ZM66RegularSpawns", "replaces": "false" }
+addSpawnTableNestedEntry => { "tableName": "UaS.ZM66RegularSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+newSpawnTable => { "spawnName": "Vulcanette", "tableName": "UaS.VulcanetteSpawns", "replaces": "false" }
+addSpawnTableNestedEntry => { "tableName": "UaS.VulcanetteSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+newSpawnTable => { "spawnName": "LiberatorRifle", "tableName": "UaS.LiberatorSpawns", "replaces": "false" }
+addSpawnTableNestedEntry => { "tableName": "UaS.LiberatorSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+newSpawnTable => { "spawnName": "LiberatorNoGL", "tableName": "UaS.LiberatorNoGLSpawns", "replaces": "false" }
+addSpawnTableNestedEntry => { "tableName": "UaS.LiberatorNoGLSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+newSpawnTable => { "spawnName": "BossRifle", "tableName": "UaS.BossRifleSpawns", "replaces": "false" }
+addSpawnTableNestedEntry => { "tableName": "UaS.BossRifleSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }

@@ -1,0 +1,20 @@
+// Flare Spawn Table Entries
+newSpawnTable => { "spawnName": "HDAmBox", "tableName": "UaS.AmmoBoxSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.AmmoBoxSpawns", "name": "UaS_Flare", "chance": "51", "replaces": "false" }
+newSpawnTable => { "spawnName": "HDBackpack", "tableName": "UaS.BackpackSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.BackpackSpawns", "name": "UaS_Flare", "chance": "51", "replaces": "false" }
+newSpawnTable => { "spawnName": "PortableMedikit", "tableName": "UaS.MedikitSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.MedikitSpawns", "name": "UaS_Flare", "chance": "51", "replaces": "false" }
+newSpawnTable => { "spawnName": "PortableStimpack", "tableName": "UaS.StimpackSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.StimpackSpawns", "name": "UaS_Flare", "chance": "51", "replaces": "false" }
+
+// Glowstick Spawn Table Entries
+newSpawnTable => { "spawnName": "HDAmBox", "tableName": "UaS.AmmoBoxSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.AmmoBoxSpawns", "name": "UaS_Glowstick", "chance": "51", "replaces": "false" }
+newSpawnTable => { "spawnName": "HDBackpack", "tableName": "UaS.BackpackSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.BackpackSpawns", "name": "UaS_Glowstick", "chance": "51", "replaces": "false" }
+newSpawnTable => { "spawnName": "PortableMedikit", "tableName": "UaS.MedikitSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.MedikitSpawns", "name": "UaS_Glowstick", "chance": "51", "replaces": "false" }
+newSpawnTable => { "spawnName": "PortableStimpack", "tableName": "UaS.StimpackSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.StimpackSpawns", "name": "UaS_Glowstick", "chance": "51", "replaces": "false" }
+

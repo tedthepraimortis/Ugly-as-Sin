@@ -1,0 +1,3 @@
+// Assault Pack Spawn Table Entries
+newSpawnTable => { "spawnName": "HDBackpack", "tableName": "UaS.BackpackSpawns", "replaces": "false" }
+addSpawnTableSingleEntry => { "tableName": "UaS.BackpackSpawns", "name": "UaS_WildAssaultPack", "chance": "64", "replaces": "false" }
