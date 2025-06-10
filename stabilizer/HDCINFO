@@ -1,7 +1,7 @@
 // Gyro Stabilizer Spawn Table Entries
 newSpawnTable => { "spawnName": "StabilizerRandom" }
-addSpawnTableSingleEntry => { "tableName": "StabilizerRandom", "name": "UaS_GyroStabilizer", "weight": "2" }
-addSpawnTableSingleEntry => { "tableName": "StabilizerRandom", "name": "UaS_WeaponSling", "weight": "1" }
+addSpawnTableSingleEntry => { "tableName": "StabilizerRandom", "name": "UaS_GyroStabilizer", "weight": "2", "persists": "true" }
+addSpawnTableSingleEntry => { "tableName": "StabilizerRandom", "name": "UaS_WeaponSling", "weight": "1", "persists": "true" }
 
 newSpawnTable => { "spawnName": "HDSMG", "tableName": "UaS.SMGSpawns", "replaces": "false" }
 addSpawnTableNestedEntry => { "tableName": "UaS.SMGSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
