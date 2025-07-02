@@ -16,9 +16,9 @@ enum UaS_Debug_Flags {
 
 extend class UaS {
 	static play void LogDebug(int module, string message, actor recip = null) {
-		if (!(UaS_Debug & module)) { return; }
+		if (!DebugEnabled(module)) { return; }
 		if (recip && recip is "PlayerPawn") { recip.A_Log(message, true); }
-		else { console.printf(message); }
+		else { HDCore.log('Ugly as Sin', LOGGING_DEBUG, message); }
 	}
 
 	static play bool DebugEnabled(int module) {
