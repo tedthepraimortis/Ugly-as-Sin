@@ -8,7 +8,7 @@ extend class UaS_Consumable {
 	string opensound,closesound,consumesound;
 	array<string> OpenText;
 	array<string> ConsumeText;
-	array<string> FoodList;
+	array<name> FoodList;
 	array<string> NiceFoodList;
 	property Calories: calories;
 	property Fluid: fluid;

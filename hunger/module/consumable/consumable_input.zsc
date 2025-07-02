@@ -1,75 +1,98 @@
 extend class UaS_Consumable {
 	void HandleInput() {
-		if (CheckButton(BT_ATTACK, CBM_HOLDING)) { Consume(); }
-		else if (CheckButton(BT_RELOAD, CBM_PRESSED)) { ResealPackage(); }
-		else if (CheckButton(BT_UNLOAD, CBM_PRESSED)) { OpenPackage(); }
+		if (CheckButton(BT_ATTACK, CBM_HOLDING)) Consume();
+		else if (CheckButton(BT_RELOAD, CBM_PRESSED)) ResealPackage();
+		else if (CheckButton(BT_UNLOAD, CBM_PRESSED)) OpenPackage();
 	}
 
 	void Consume() {
-		if (!tracker.mouthclear()) { return; }
-		if (weaponstatus[UGCS_OPEN] != UGCSF_OPENED) { return; }
-		if (weaponbulk() <= 0) { return; }
-		if (!(calories > 0 || fluid > 0)) { return; }
+		if (!tracker.mouthclear()) return;
+		if (weaponstatus[UGCS_OPEN] != UGCSF_OPENED) return;
+		if (weaponbulk() <= 0) return;
+		if (!(calories > 0 || fluid > 0)) return;
+
 		int bitesize = int(calories / (bulk));
 		int sipsize = int(fluid / (bulk));
 		int mouthful = random[uas_hunger](4,6);
 		int addsick;
+
 		weaponstatus[UGCS_CONSUMED]++;
 		diffbulk = 100/bulk;
+
 		owner.A_StartSound(consumesound, CHAN_WEAPON);
+
 		if (bDRINKABLE) {
 			tracker.drinking = true;
 			mouthful = int(mouthful / 2);
 		}
-		if (random(10,100) <= weaponstatus[UGCS_SPOILAGE]) { addsick = 1; }
+
+		if (random(10,100) <= weaponstatus[UGCS_SPOILAGE]) addsick = 1;
+
 		tracker.EatOrDrink(bitesize, sipsize, mouthful, addsick);
+
 		string consumemessage = RandomConsumeMessage();
-		if (consumemessage.length()>0) { owner.A_Log(RandomConsumeMessage(), true); }
+		if (consumemessage.length() > 0) owner.A_Log(consumemessage, true);
+		
 		OnConsume();
 	}
 
 	void OpenPackage() {
-		if (weaponstatus[UGCS_OPEN] != UGCSF_SEALED) { return; }
-		owner.A_StartSound(opensound,
+		if (weaponstatus[UGCS_OPEN] != UGCSF_SEALED) return;
+		
+		owner.A_StartSound(
+			opensound,
 			CHAN_WEAPON, CHANF_OVERLAP,
-			attenuation: ATTN_STATIC);
+			attenuation: ATTN_STATIC
+		);
+		
 		weaponstatus[UGCS_OPEN] = UGCSF_OPENED;
-		if (weaponstatus[UGCS_LASTSPOILTIME] == -1) {
-			weaponstatus[UGCS_LASTSPOILTIME] = level.totaltime;
-		}
+		
+		if (weaponstatus[UGCS_LASTSPOILTIME] == -1) weaponstatus[UGCS_LASTSPOILTIME] = level.totaltime;
+
 		owner.A_Log(string.format("Opened %s. %s", gettag(), RandomOpenMessage()), true);
+		
 		GiveContents();
 		OnOpen();
 	}
 
 	void GiveContents() {
-		if (weaponstatus[UGCS_GAVECONTENTS] == true) { return; }
-		for (int i=0; i<FoodList.size(); i++) {
-			class<actor> newItem = (class<actor>)(FoodList[i]);
-			bool isWep = (newItem && (newItem is (class<actor>)('HDWeapon')));
-			if (isWep) {
-				owner.A_GiveInventory("HDWeaponGiver");
-				HDWeaponGiver wg = HDWeaponGiver(owner.findinventory("HDWeaponGiver"));
-				wg.weapontogive = FoodList[i];
+		if (weaponstatus[UGCS_GAVECONTENTS] == true) return;
+
+		forEach (food : FoodList) {
+			if (
+				HDCore.CheckClassExists(food)
+			 	&& HDCore.IsChildClass((Class<Object>)(food), 'HDWeapon')
+			) {
+				owner.A_GiveInventory('HDWeaponGiver');
+				HDWeaponGiver wg = HDWeaponGiver(owner.findinventory('HDWeaponGiver'));
+
+				wg.weapontogive = food;
+				
 				wg.postbeginplay();
+				
 				wg.tick();
 				wg.tick();
 				wg.tick();
+				
 				wg.destroy();
-			}
-			else {
-				owner.A_GiveInventory(FoodList[i]);
+			} else {
+				owner.A_GiveInventory(food);
 			}
 		}
 		weaponstatus[UGCS_GAVECONTENTS] = true;
 	}
 
 	void ResealPackage() {
-		if (!bRESEALABLE) { return; }
-		owner.A_StartSound(closesound,
+		if (!bRESEALABLE) return;
+
+		owner.A_StartSound(
+			closesound,
 			CHAN_WEAPON, CHANF_OVERLAP,
-			attenuation: ATTN_STATIC);
+			attenuation: ATTN_STATIC
+		);
+
 		weaponstatus[UGCS_OPEN] = UGCSF_SEALED;
+
 		OnClose();
 	}
 
@@ -77,13 +100,16 @@ extend class UaS_Consumable {
 	bool CheckButton(int button, int mode = 0) {
 		int bt = owner.player.cmd.buttons;
 		int bto = owner.player.oldbuttons;
+
 		switch (mode) {
 			case CBM_DOWN:		return (bt & button);
 			case CBM_PRESSED:	return ((bt & button) && !(bto & button));
 			case CBM_HOLDING:	return ((bt & button) && (bto & button));
 			case CBM_RELEASED:	return (!(bt & button) && (bto & button));
 		}
-		console.printf("CheckButton() failed to find valid condition");
+
+		HDCore.Log('Ugly as Sin', LOGGING_WARN, "CheckButton() failed to find valid condition");
+
 		return false;
 	}
 

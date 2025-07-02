@@ -14,11 +14,7 @@ extend class UaS_Scarcity_Handler {
 		Array< Class<Inventory> > armourClasses;
 
 		armourClasses.clear();
-		forEach(className : armourClassNames) {
-			let cls = (Class<Inventory>)(className);
-
-			if (cls) armourClasses.push(cls);
-		}
+		forEach(className : armourClassNames) if (HDCore.CheckClassExists(className)) armourClasses.push(className);
 		
 		bool boxClass = (
 			mo is 'HD9mBoxPickup'

@@ -1,16 +1,14 @@
 extend class UaS_Consumable {
 	// Add items to the package contents list
-	void AddItem(string FoodItem, int quantity = 1) {
+	void AddItem(name FoodItem, int quantity = 1) {
 		bPACKAGED = true;
-		class<actor> newItem = (class<actor>)(FoodItem);
-		bool valid = (newItem);
-		if (!valid) {
+		if (!HDCore.CheckClassExists(FoodItem)) {
 			A_Log(string.format("\ci%s: Invalid class '%s'! Ignoring...", GetClassName(), FoodItem));
 			return;
 		}
-		for (int i=1; i<= quantity; i++) {
+		for (int i = 1; i <= quantity; i++) {
 			FoodList.push(FoodItem);
-			NiceFoodList.push(getdefaultbytype(newItem).gettag());
+			NiceFoodList.push(GetDefaultByType((Class<Actor>)(FoodItem)).getTag());
 		}
 	}
 }

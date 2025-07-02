@@ -17,19 +17,23 @@ extend class UaS_Consumable {
 		double itemsbulk = 0;
 		if (weaponstatus[UGCS_GAVECONTENTS] == false) {
 			for (int i=0; i < FoodList.size(); i++) {
-				class<actor> bulkItem = (class<actor>)(FoodList[i]);
-				bool isConsumable = (bulkItem && (bulkItem is (class<actor>)('UaS_Consumable')));
-				bool isWeapon = (bulkItem && (bulkItem is (class<actor>)('HDWeapon')));
-				bool isPickup = (bulkItem && (bulkItem is (class<actor>)('HDPickup')));
+				bool clsExists = HDCore.CheckClassExists(FoodList[i]);
+
+				// If the Food Class doesn't exist, skip.
+				if (!clsExists) continue;
+
+				Class<Actor> foodCls = FoodList[i];
+				bool isWeapon = HDCore.IsChildClass(foodCls, 'HDWeapon');
+				bool isPickup = HDCore.IsChildClass(foodCls, 'HDPickup');
+				// bool isConsumable = HDCore.IsChildClass(foodCls, 'UaS_Consumable');
+				
 				if (isWeapon) {
-					itemsbulk += (HDWeapon(getdefaultbytype((class<actor>)(FoodList[i]))).weaponbulk()) * 0.7;
+					itemsbulk += HDWeapon(GetDefaultByType(foodCls)).weaponbulk() * 0.7;
+				} else if (isPickup) {
+					itemsbulk += HDPickup(GetDefaultByType(foodCls)).bulk * 0.7;
+				// } else if (isConsumable) { // Don't think this is needed if weaponbulk() works...
+				// 	itemsbulk += UaS_Consumable(GetDefaultByType(foodCls)).bulk * 0.7;
 				}
-				else if (isPickup) {
-					itemsbulk += (HDPickup(getdefaultbytype((class<actor>)(FoodList[i]))).bulk) * 0.7;
-				}
-				// else if (isConsumable) { // Don't think this is needed if weaponbulk() works...
-					// itemsbulk += (UaS_Consumable(getdefaultbytype((class<actor>)(FoodList[i]))).bulk) * 0.7;
-				// }
 			}
 		}
 		return (bulk - (weaponstatus[UGCS_CONSUMED])) + itemsbulk;

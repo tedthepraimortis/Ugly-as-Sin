@@ -16,26 +16,26 @@ class UaS_AI_Bootstrap : EventHandler {
 		
 		loadFlashlightClasses(cmdReader.commands);
 
-		if (HDCore.ShouldLog('UaS', LOGGING_DEBUG)) {
+		if (HDCore.ShouldLog('Ugly as Sin', LOGGING_DEBUG)) {
 			let msg = "Robot Classes for AI Flashlights:\n";
 
 			forEach(cls : botClasses) msg = msg.." * "..cls.."\n";
 
-			HDCore.Log('UaS', LOGGING_DEBUG, msg);
+			HDCore.Log('Ugly as Sin', LOGGING_DEBUG, msg);
 
 
 			msg = "Human Classes for AI Flashlights:\n";
 
 			forEach(cls : humanClasses) msg = msg.." * "..cls.."\n";
 
-			HDCore.Log('UaS', LOGGING_DEBUG, msg);
+			HDCore.Log('Ugly as Sin', LOGGING_DEBUG, msg);
 
 
 			msg = "Other Classes for AI Flashlights:\n";
 
 			forEach(cls : otherClasses) msg = msg.." * "..cls.."\n";
 
-			HDCore.Log('UaS', LOGGING_DEBUG, msg);
+			HDCore.Log('Ugly as Sin', LOGGING_DEBUG, msg);
 		}
 
 		initialized = true;
