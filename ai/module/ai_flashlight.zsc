@@ -5,26 +5,26 @@ extend class UaS_AI_Handler {
 	string toggleintent;
 
 	void Flashlight() {
+
+		// If owner or level is frozen, quit.
 		if (owner.isFrozen() || level.isFrozen()) { return; }
+
+		// If flashlights are disabled, turn them off and quit.
 		if (!UaS_AI_Flashlights) { UaS.SendIntent("LLM_Toggle", "Off", owner); return; }
+
+		UaS_AI_Bootstrap bootstrap = UaS_AI_Bootstrap(EventHandler.find("UaS_AI_Bootstrap"));
+
 		// Do light for any "hitscan" type enemies
-		bool BotClass = (
-			owner is "HERPBot" ||
-			owner is "DERPBot"
-		);
-		bool HumanClass = (
-			owner is "ZombieStormtrooper" ||
-			owner is "ZombieShotgunner" ||
-			owner is "VulcanetteZombie" ||
-			owner is "HDOperator"
-		);
-		bool OtherClass = (
-			owner is "SatanRobo" ||
-			owner is "Spiderdemon" ||
-			owner is "Manticore"
-		);
+		let ownerCls = owner.getClass();
+		bool BotClass = HDCore.IsAnyChildClass(ownerCls, bootstrap.botClasses);
+		bool HumanClass = HDCore.IsAnyChildClass(ownerCls, bootstrap.humanClasses);
+		bool OtherClass = HDCore.IsAnyChildClass(ownerCls, bootstrap.otherClasses);
+		
+		// If owner isn't a valid class, quit.
 		if (!(BotClass || HumanClass || OtherClass)) { return; }
 
+
+		// If the owner doesn't have the LLM, give them one
 		string flc = "UaS_LaserLightModule";
 		if (!owner.FindInventory(flc)) {
 			owner.giveinventory(flc, 1);
@@ -43,7 +43,7 @@ extend class UaS_AI_Handler {
 		);
 
 		if (HumanClass) {
-			if (recheck <=0) {
+			if (recheck <= 0) {
 				// sample light from ahead of monster
 				FLineTraceData lookSpot;
 				owner.LineTrace(owner.angle, 256, owner.pitch, TRF_THRUACTORS, owner.height * 0.75, data: lookSpot);
@@ -63,6 +63,7 @@ extend class UaS_AI_Handler {
 				recheck = max(random[aillm](35, 128), lightlevel); // recheck more often in darker areas
 				prefmode = randompick[aillm](0,0,0,1,2);
 			}
+
 			// Force on if the monster is aiming at the player
 			if (isowneraiming) {
 				if (owner.target && (owner.CheckSight(owner.target) || frandom[aillm](0,1) < 0.25)) {
@@ -74,6 +75,7 @@ extend class UaS_AI_Handler {
 				}
 				recheck = 10;
 			}
+
 			//if (flashing) { UaS.SendIntent("LLM_ModeSwitch", "3", owner); }
 			UaS.SendIntent("LLM_ModeSwitch", string.format("%i",prefmode), owner);
 			UaS.SendIntent("LLM_Toggle", toggleintent, owner);

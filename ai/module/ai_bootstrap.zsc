@@ -1,6 +1,130 @@
 class UaS_AI_Bootstrap : EventHandler {
 	int givenAIHandlers;
 
+	Array<name> botClasses;
+	Array<name> humanClasses;
+	Array<name> otherClasses;
+
+	bool initialized;
+
+	void Init() {
+		botClasses.clear();
+		humanClasses.clear();
+		otherClasses.clear();
+
+		let cmdReader = HDCoreInfoReader(StaticEventHandler.find('HDCoreInfoReader'));
+		
+		loadFlashlightClasses(cmdReader.commands);
+
+		if (HDCore.ShouldLog('UaS', LOGGING_DEBUG)) {
+			let msg = "Robot Classes for AI Flashlights:\n";
+
+			forEach(cls : botClasses) msg = msg.." * "..cls.."\n";
+
+			HDCore.Log('UaS', LOGGING_DEBUG, msg);
+
+
+			msg = "Human Classes for AI Flashlights:\n";
+
+			forEach(cls : humanClasses) msg = msg.." * "..cls.."\n";
+
+			HDCore.Log('UaS', LOGGING_DEBUG, msg);
+
+
+			msg = "Other Classes for AI Flashlights:\n";
+
+			forEach(cls : otherClasses) msg = msg.." * "..cls.."\n";
+
+			HDCore.Log('UaS', LOGGING_DEBUG, msg);
+		}
+
+		initialized = true;
+	}
+
+	void loadFlashlightClasses(Array<HDCoreCommand> cmds) {
+		forEach (cmd : cmds) {
+			switch (cmd.command) {
+				case 'addFlashlightBotClass': {
+					let name = cmd.getNameParam("name");
+
+					if (!HDCore.CheckClassExists(name)) break;
+
+					if (botClasses.find(name) >= botClasses.size()) botClasses.push(name);
+
+					break;
+				}
+				case 'removeFlashlightBotClass': {
+					let name = cmd.getNameParam("name");
+
+					if (!HDCore.CheckClassExists(name)) break;
+
+					let index = botClasses.find(name);
+					if (index < botClasses.size()) botClasses.delete(index);
+
+					break;
+				}
+				case 'clearFlashlightBotClasses': {
+					botClasses.clear();
+					break;
+				}
+				case 'addFlashlightHumanClass': {
+					let name = cmd.getNameParam("name");
+
+					if (!HDCore.CheckClassExists(name)) break;
+
+					if (humanClasses.find(name) >= humanClasses.size()) humanClasses.push(name);
+
+					break;
+				}
+				case 'removeFlashlightHumanClass': {
+					let name = cmd.getNameParam("name");
+
+					if (!HDCore.CheckClassExists(name)) break;
+
+					let index = humanClasses.find(name);
+					if (index < humanClasses.size()) humanClasses.delete(index);
+					
+					break;
+				}
+				case 'clearFlashlightHumanClasses': {
+					humanClasses.clear();
+					break;
+				}
+				case 'addFlashlightOtherClass': {
+					let name = cmd.getNameParam("name");
+
+					if (!HDCore.CheckClassExists(name)) break;
+
+					if (otherClasses.find(name) >= otherClasses.size()) otherClasses.push(name);
+
+					break;
+				}
+				case 'removeFlashlightOtherClass': {
+					let name = cmd.getNameParam("name");
+
+					if (!HDCore.CheckClassExists(name)) break;
+
+					let index = otherClasses.find(name);
+					if (index < otherClasses.size()) otherClasses.delete(index);
+
+					break;
+				}
+				case 'clearFlashlightOtherClasses': {
+					otherClasses.clear();
+					break;
+				}
+				default:
+					break;
+			}
+		}
+	}
+
+	override void WorldLoaded(WorldEvent e) {
+
+		// Populates the main arrays if they haven't been already.
+		if (!initialized) init();
+	}
+
 	override void WorldThingSpawned(WorldEvent e) {
 		if(!e.Thing) { return; }
 		if(UaS.CVarCheck("UaS_AdvancedAIEnabled") && !(CVar.GetCVar("UaS_AdvancedAIEnabled").GetBool())) { return; }

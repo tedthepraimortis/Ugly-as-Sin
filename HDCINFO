@@ -76,3 +76,16 @@ newSpawnTable => { "spawnName": "LiberatorNoGL", "tableName": "UaS.LiberatorNoGL
 addSpawnTableNestedEntry => { "tableName": "UaS.LiberatorNoGLSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
 newSpawnTable => { "spawnName": "BossRifle", "tableName": "UaS.BossRifleSpawns", "replaces": "false" }
 addSpawnTableNestedEntry => { "tableName": "UaS.BossRifleSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+
+// AI: Flashlight Classes
+addFlashlightBotClass => { "name": "HERPBot" }
+addFlashlightBotClass => { "name": "DERPBot" }
+
+addFlashlightHumanClass => { "name": "ZombieStormTrooper" }
+addFlashlightHumanClass => { "name": "ZombieShotgunner" }
+addFlashlightHumanClass => { "name": "VulcanetteZombie" }
+addFlashlightHumanClass => { "name": "HDOperator" }
+
+addFlashlightOtherClass => { "name": "SatanRobo" }
+addFlashlightOtherClass => { "name": "Spiderdemon" }
+addFlashlightOtherClass => { "name": "Manticore" }

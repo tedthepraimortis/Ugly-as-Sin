@@ -1,0 +1,12 @@
+// Flashlight Classes
+addFlashlightBotClass => { "name": "HERPBot" }
+addFlashlightBotClass => { "name": "DERPBot" }
+
+addFlashlightHumanClass => { "name": "ZombieStormTrooper" }
+addFlashlightHumanClass => { "name": "ZombieShotgunner" }
+addFlashlightHumanClass => { "name": "VulcanetteZombie" }
+addFlashlightHumanClass => { "name": "HDOperator" }
+
+addFlashlightOtherClass => { "name": "SatanRobo" }
+addFlashlightOtherClass => { "name": "Spiderdemon" }
+addFlashlightOtherClass => { "name": "Manticore" }
