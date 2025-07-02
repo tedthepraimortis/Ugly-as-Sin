@@ -172,21 +172,15 @@ class UaS_LaserLightModule : HDWeapon {
 			newpitch = sc.pitch;
 		}
 		else {
-			bool BotClass = (
-				owner is "HERPBot" ||
-				owner is "DERPBot"
-			);
-			bool HumanClass = (
-				owner is "ZombieStormtrooper" ||
-				owner is "ZombieShotgunner" ||
-				owner is "VulcanetteZombie" ||
-				owner is "HDOperator"
-			);
-			bool OtherClass = (
-				owner is "SatanRobo" ||
-				owner is "Spiderdemon" ||
-				owner is "Manticore"
-			);
+
+			UaS_AI_Bootstrap bootstrap = UaS_AI_Bootstrap(EventHandler.find("UaS_AI_Bootstrap"));
+
+			// Do light for any "hitscan" type enemies
+			let ownerCls = owner.getClass();
+			bool BotClass = HDCore.IsAnyChildClass(ownerCls, bootstrap.botClasses);
+			bool HumanClass = HDCore.IsAnyChildClass(ownerCls, bootstrap.humanClasses);
+			bool OtherClass = HDCore.IsAnyChildClass(ownerCls, bootstrap.otherClasses);
+
 			if (HumanClass) { offset = 8; heightfactor = 0.8; }
 			else if (BotClass) {
 				if (owner is "HERPBot") {
