@@ -19,7 +19,7 @@ extend class UaS_AI_Handler {
 		bool BotClass = HDCore.IsAnyChildClass(ownerCls, bootstrap.botClasses);
 		bool HumanClass = HDCore.IsAnyChildClass(ownerCls, bootstrap.humanClasses);
 		bool OtherClass = HDCore.IsAnyChildClass(ownerCls, bootstrap.otherClasses);
-		
+
 		// If owner isn't a valid class, quit.
 		if (!(BotClass || HumanClass || OtherClass)) { return; }
 
