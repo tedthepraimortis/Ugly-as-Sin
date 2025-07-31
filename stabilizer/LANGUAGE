@@ -14,3 +14,18 @@ UI_STABILIZER_DETACHED_FORMAT    = "\czDetached \ccUID %i";
 UI_STABILIZER_CALIBRATING_FORMAT = "\crCALIBRATING \cu%.5f";
 UI_STABILIZER_STABILIZING_FORMAT = "\cqSTABILIZING \cu%.5f";
 UI_STABILIZER_STABILIZED_FORMAT  = "\cdSTABILIZED \cu%.5f";
+
+
+//-----------------
+// Merchant Store Entries
+//-----------------
+
+// Gyro Stabilizer
+MERCH_CAT_GYROSTABILIZER          = "Ugly as Sin";
+MERCH_TAG_GYROSTABILIZER          = "Gyroscopic Stabilizer";
+MERCH_FLAVOR_GYROSTABILIZER       = "Be the cybernetic policeman you were born to be.";
+
+// Weapon Sling
+MERCH_CAT_WEAPONSLING             = "Ugly as Sin";
+MERCH_TAG_WEAPONSLING             = "Weapon Sling";
+MERCH_FLAVOR_WEAPONSLING          = "For when you need that third arm.";

@@ -1,0 +1,1 @@
+server bool hdm_enable_assaultpack = true;

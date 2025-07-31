@@ -5,3 +5,12 @@ PICKUP_ASSAULTPACK   = "Picked up an assault pack!";
 
 ASSAULTPACK_TOOLARGE = "That item is too large!";
 ASSAULTPACK_TOOFULL  = "Your backpack is too full.";
+
+//-----------------
+// Merchant Store Entries
+//-----------------
+
+// Assault Pack
+MERCH_CAT_ASSAULTPACK             = "Ugly as Sin";
+MERCH_TAG_ASSAULTPACK             = "Assault Pack";
+MERCH_FLAVOR_ASSAULTPACK          = "May or may not contain anything useful inside.";

@@ -1,0 +1,2 @@
+server bool hdm_enable_uasflares = true;
+server bool hdm_enable_uasglowsticks = true;

@@ -23,3 +23,7 @@ newSpawnTable => { "spawnName": "LiberatorNoGL", "tableName": "UaS.LiberatorNoGL
 addSpawnTableNestedEntry => { "tableName": "UaS.LiberatorNoGLSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
 newSpawnTable => { "spawnName": "BossRifle", "tableName": "UaS.BossRifleSpawns", "replaces": "false" }
 addSpawnTableNestedEntry => { "tableName": "UaS.BossRifleSpawns", "name": "StabilizerRandom", "chance": "13", "replaces": "false" }
+
+// Merchant Store Entries
+newMerchantStoreItem => { "enabled": "#hdm_enable_gyrostabilizer", "type": "item", "category": "$MERCH_CAT_GYROSTABILIZER", "item": "UaS_GyroStabilizer", "icon": "UGSIR0", "displayName": "$MERCH_TAG_GYROSTABILIZER", "basePrice": "150", "flavorText": "$MERCH_FLAVOR_GYROSTABILIZER" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_weaponsling", "type": "item", "category": "$MERCH_CAT_WEAPONSLING", "item": "UaS_WeaponSling", "icon": "HSCVI0", "displayName": "$MERCH_TAG_WEAPONSLING", "basePrice": "80", "flavorText": "$MERCH_FLAVOR_WEAPONSLING" }

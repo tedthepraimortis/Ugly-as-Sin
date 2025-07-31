@@ -13,3 +13,13 @@ LLM_LASERMODE   = "\cjLaser Mode: ";
 LLM_LASERCOLOR  = "\cjLaser Color: ";
 LLM_ACTIVATED   = "\cj=On=";
 LLM_DEACTIVATED = "\cu=Off=";
+
+
+//-----------------
+// Merchant Store Entries
+//-----------------
+
+// LLM
+MERCH_CAT_LLM                     = "Ugly as Sin";
+MERCH_TAG_LLM                     = "Laser/Light Module";
+MERCH_FLAVOR_LLM                  = "Not quite a light bong, but it'll do.";

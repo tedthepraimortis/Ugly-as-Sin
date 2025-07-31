@@ -89,3 +89,16 @@ addFlashlightHumanClass => { "name": "HDOperator" }
 addFlashlightOtherClass => { "name": "SatanRobo" }
 addFlashlightOtherClass => { "name": "Spiderdemon" }
 addFlashlightOtherClass => { "name": "Manticore" }
+
+// Merchant Store Entries
+newMerchantStoreItem => { "enabled": "#hdm_enable_ammopouch", "type": "item", "category": "$MERCH_CAT_AMMOPOUCH", "item": "UaS_AmmoPouch", "icon": "UGSPA0", "displayName": "$MERCH_TAG_AMMOPOUCH", "basePrice": "120", "flavorText": "$MERCH_FLAVOR_AMMOPOUCH" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_assaultpack", "type": "item", "category": "$MERCH_CAT_ASSAULTPACK", "item": "UaS_WildAssaultPack", "icon": "UGSQA0", "displayName": "$MERCH_TAG_ASSAULTPACK", "basePrice": "120", "flavorText": "$MERCH_FLAVOR_ASSAULTPACK" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_foodration", "type": "item", "category": "$MERCH_CAT_FOODRATION", "item": "UaS_FoodRation", "icon": "HSCVA0", "displayName": "$MERCH_TAG_FOODRATION", "basePrice": "8", "flavorText": "$MERCH_FLAVOR_FOODRATION" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_gyrostabilizer", "type": "item", "category": "$MERCH_CAT_GYROSTABILIZER", "item": "UaS_GyroStabilizer", "icon": "UGSIR0", "displayName": "$MERCH_TAG_GYROSTABILIZER", "basePrice": "150", "flavorText": "$MERCH_FLAVOR_GYROSTABILIZER" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_llm", "type": "item", "category": "$MERCH_CAT_LLM", "item": "UaS_LaserLightModule", "icon": "UGSIE0", "displayName": "$MERCH_TAG_LLM", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_LLM" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_uasflares", "type": "item", "category": "$MERCH_CAT_UASFLARES", "item": "UaS_Flare", "icon": "UGSFA0", "displayName": "$MERCH_TAG_UASFLARES", "basePrice": "1", "flavorText": "$MERCH_FLAVOR_UASFLARES" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_uasglowsticks", "type": "item", "category": "$MERCH_CAT_UASGLOWSTICKS", "item": "UaS_Glowstick", "icon": "UGSIB0", "displayName": "$MERCH_TAG_UASGLOWSTICKS", "basePrice": "1", "flavorText": "$MERCH_FLAVOR_UASGLOWSTICKS" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_messkit", "type": "item", "category": "$MERCH_CAT_MESSKIT", "item": "UaS_MessKit", "icon": "HSCVB0", "displayName": "$MERCH_TAG_MESSKIT", "basePrice": "12", "flavorText": "$MERCH_FLAVOR_MESSKIT" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_respirator", "type": "item", "category": "$MERCH_CAT_RESPIRATOR", "item": "UaS_Respirator", "icon": "UGSID0", "displayName": "$MERCH_TAG_RESPIRATOR", "basePrice": "60", "flavorText": "$MERCH_FLAVOR_RESPIRATOR" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_waterration", "type": "item", "category": "$MERCH_CAT_WATERRATION", "item": "UaS_WaterRation", "icon": "HSCVR0", "displayName": "$MERCH_TAG_WATERRATION", "basePrice": "8", "flavorText": "$MERCH_FLAVOR_WATERRATION" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_weaponsling", "type": "item", "category": "$MERCH_CAT_WEAPONSLING", "item": "UaS_WeaponSling", "icon": "HSCVI0", "displayName": "$MERCH_TAG_WEAPONSLING", "basePrice": "80", "flavorText": "$MERCH_FLAVOR_WEAPONSLING" }

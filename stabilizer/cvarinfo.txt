@@ -1,3 +1,6 @@
 server bool UaS_StabilizerSpawns = true;
 server bool UaS_OldSling = false;
 user int UaS_SlingDelay = 35;
+
+server bool hdm_enable_gyrostabilizer = true;
+server bool hdm_enable_weaponsling = true;

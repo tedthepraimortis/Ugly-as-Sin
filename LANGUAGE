@@ -596,3 +596,64 @@ UAS_CONSUMABLE_DISPLAY_STATUSCOLOR_AMOUNT_LESSTHAN_30 = "\cu";
 UAS_CONSUMABLE_DISPLAY_STATUSCOLOR_AMOUNT_LESSTHAN_20 = "\cs";
 UAS_CONSUMABLE_DISPLAY_STATUSCOLOR_AMOUNT_LESSTHAN_10 = "\cq";
 UAS_CONSUMABLE_DISPLAY_STATUSCOLOR_AMOUNT_LESSTHAN_0  = "\cd";
+
+
+
+//-----------------
+// Merchant Store Entries
+//-----------------
+
+// Ammo Pouch
+MERCH_CAT_AMMOPOUCH               = "Ugly as Sin";
+MERCH_TAG_AMMOPOUCH               = "Ammo Pouch";
+MERCH_FLAVOR_AMMOPOUCH            = "I swear I had some ammo in here somewhere.";
+
+// Assault Pack
+MERCH_CAT_ASSAULTPACK             = "Ugly as Sin";
+MERCH_TAG_ASSAULTPACK             = "Assault Pack";
+MERCH_FLAVOR_ASSAULTPACK          = "May or may not contain anything useful inside.";
+
+// Flares
+MERCH_CAT_UASFLARES               = "Ugly as Sin";
+MERCH_TAG_UASFLARES               = "Emergency Flares";
+MERCH_FLAVOR_UASFLARES            = "wonder if you can cook with these...";
+
+// Food Ration
+MERCH_CAT_FOODRATION              = "Ugly as Sin";
+MERCH_TAG_FOODRATION              = "Food Ration";
+MERCH_FLAVOR_FOODRATION           = "Crunchy.";
+
+// Glowsticks
+MERCH_CAT_UASGLOWSTICKS           = "Ugly as Sin";
+MERCH_TAG_UASGLOWSTICKS           = "Glowsticks";
+MERCH_FLAVOR_UASGLOWSTICKS        = "Don't drink this.";
+
+// LLM
+MERCH_CAT_LLM                     = "Ugly as Sin";
+MERCH_TAG_LLM                     = "Laser/Light Module";
+MERCH_FLAVOR_LLM                  = "Not quite a light bong, but it'll do.";
+
+// Gyro Stabilizer
+MERCH_CAT_GYROSTABILIZER          = "Ugly as Sin";
+MERCH_TAG_GYROSTABILIZER          = "Gyroscopic Stabilizer";
+MERCH_FLAVOR_GYROSTABILIZER       = "Be the cybernetic policeman you were born to be.";
+
+// Mess Kit
+MERCH_CAT_MESSKIT                 = "Ugly as Sin";
+MERCH_TAG_MESSKIT                 = "Mess Kit";
+MERCH_FLAVOR_MESSKIT              = "Don't make a mess.";
+
+// Respirator
+MERCH_CAT_RESPIRATOR              = "Ugly as Sin";
+MERCH_TAG_RESPIRATOR              = "Respirator";
+MERCH_FLAVOR_RESPIRATOR           = "Blub blub blub.";
+
+// Water Ration
+MERCH_CAT_WATERRATION             = "Ugly as Sin";
+MERCH_TAG_WATERRATION             = "Water Ration";
+MERCH_FLAVOR_WATERRATION          = "NOTE: Taste depends on temperature.";
+
+// Weapon Sling
+MERCH_CAT_WEAPONSLING             = "Ugly as Sin";
+MERCH_TAG_WEAPONSLING             = "Weapon Sling";
+MERCH_FLAVOR_WEAPONSLING          = "For when you need that third arm.";

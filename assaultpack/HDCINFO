@@ -1,3 +1,6 @@
 // Assault Pack Spawn Table Entries
 newSpawnTable => { "spawnName": "HDBackpack", "tableName": "UaS.BackpackSpawns", "replaces": "false" }
 addSpawnTableSingleEntry => { "tableName": "UaS.BackpackSpawns", "name": "UaS_WildAssaultPack", "chance": "64", "replaces": "false" }
+
+// Merchant Store Entries
+newMerchantStoreItem => { "enabled": "#hdm_enable_assaultpack", "type": "item", "category": "$MERCH_CAT_ASSAULTPACK", "item": "UaS_WildAssaultPack", "icon": "UGSQA0", "displayName": "$MERCH_TAG_ASSAULTPACK", "basePrice": "120", "flavorText": "$MERCH_FLAVOR_ASSAULTPACK" }

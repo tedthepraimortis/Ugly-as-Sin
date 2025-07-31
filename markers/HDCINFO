@@ -18,3 +18,6 @@ addSpawnTableSingleEntry => { "tableName": "UaS.MedikitSpawns", "name": "UaS_Glo
 newSpawnTable => { "spawnName": "PortableStimpack", "tableName": "UaS.StimpackSpawns", "replaces": "false" }
 addSpawnTableSingleEntry => { "tableName": "UaS.StimpackSpawns", "name": "UaS_Glowstick", "chance": "51", "replaces": "false" }
 
+// Merchant Store Entries
+newMerchantStoreItem => { "enabled": "#hdm_enable_uasflares", "type": "item", "category": "$MERCH_CAT_UASFLARES", "item": "UaS_Flare", "icon": "UGSFA0", "displayName": "$MERCH_TAG_UASFLARES", "basePrice": "1", "flavorText": "$MERCH_FLAVOR_UASFLARES" }
+newMerchantStoreItem => { "enabled": "#hdm_enable_uasglowsticks", "type": "item", "category": "$MERCH_CAT_UASGLOWSTICKS", "item": "UaS_Glowstick", "icon": "UGSIB0", "displayName": "$MERCH_TAG_UASGLOWSTICKS", "basePrice": "1", "flavorText": "$MERCH_FLAVOR_UASGLOWSTICKS" }

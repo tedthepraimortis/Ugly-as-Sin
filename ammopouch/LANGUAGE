@@ -10,3 +10,12 @@ AMMOPOUCH_NUMPOUCHES = " --- Pouches: \cf";
 AMMOPOUCH_NOITEMS    = "No items found.";
 AMMOPOUCH_INBAG      = "In pouch:  ";
 AMMOPOUCH_ONPERSON   = "On person:  ";
+
+//-----------------
+// Merchant Store Entries
+//-----------------
+
+// Ammo Pouch
+MERCH_CAT_AMMOPOUCH               = "Ugly as Sin";
+MERCH_TAG_AMMOPOUCH               = "Ammo Pouch";
+MERCH_FLAVOR_AMMOPOUCH            = "I swear I had some ammo in here somewhere.";

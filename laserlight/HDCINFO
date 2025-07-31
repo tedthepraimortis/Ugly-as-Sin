@@ -5,3 +5,6 @@ newSpawnTable => { "spawnName": "HDBackpack", "tableName": "UaS.BackpackSpawns",
 addSpawnTableSingleEntry => { "tableName": "UaS.BackpackSpawns", "name": "UaS_LaserLightModule", "chance": "85", "replaces": "false" }
 newSpawnTable => { "spawnName": "PortableLiteAmp", "tableName": "UaS.InfraredSpawns", "replaces": "false" }
 addSpawnTableSingleEntry => { "tableName": "UaS.InfraredSpawns", "name": "UaS_LaserLightModule", "chance": "85", "replaces": "false" }
+
+// Merchant Store Entries
+newMerchantStoreItem => { "enabled": "#hdm_enable_llm", "type": "item", "category": "$MERCH_CAT_LLM", "item": "UaS_LaserLightModule", "icon": "UGSIE0", "displayName": "$MERCH_TAG_LLM", "basePrice": "50", "flavorText": "$MERCH_FLAVOR_LLM" }

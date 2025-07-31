@@ -4,3 +4,18 @@ TAG_FLARE        = "Flare";
 TAG_GLOWSTICK    = "Glowstick";
 PICKUP_FLARE     = "Picked up a flare.";
 PICKUP_GLOWSTICK = "Picked up a glowstick.";
+
+
+//-----------------
+// Merchant Store Entries
+//-----------------
+
+// Flares
+MERCH_CAT_UASFLARES               = "Ugly as Sin";
+MERCH_TAG_UASFLARES               = "Emergency Flares";
+MERCH_FLAVOR_UASFLARES            = "wonder if you can cook with these...";
+
+// Glowsticks
+MERCH_CAT_UASGLOWSTICKS           = "Ugly as Sin";
+MERCH_TAG_UASGLOWSTICKS           = "Glowsticks";
+MERCH_FLAVOR_UASGLOWSTICKS        = "Don't drink this.";

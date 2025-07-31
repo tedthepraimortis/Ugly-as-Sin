@@ -182,3 +182,23 @@ UAS_CONSUMABLE_CACOGIBLETS_CONSUMETEXT_1 = "A bit too staticy.";
 UAS_CONSUMABLE_CACOGIBLETS_CONSUMETEXT_2 = "Ack!";
 UAS_CONSUMABLE_CACOGIBLETS_CONSUMETEXT_3 = "It... works?";
 UAS_CONSUMABLE_CACOGIBLETS_CONSUMETEXT_4 = "[zap] ouch!";
+
+
+//-----------------
+// Merchant Store Entries
+//-----------------
+
+// Food Ration
+MERCH_CAT_FOODRATION              = "Ugly as Sin";
+MERCH_TAG_FOODRATION              = "Food Ration";
+MERCH_FLAVOR_FOODRATION           = "Crunchy.";
+
+// Mess Kit
+MERCH_CAT_MESSKIT                 = "Ugly as Sin";
+MERCH_TAG_MESSKIT                 = "Mess Kit";
+MERCH_FLAVOR_MESSKIT              = "Don't make a mess.";
+
+// Water Ration
+MERCH_CAT_WATERRATION             = "Ugly as Sin";
+MERCH_TAG_WATERRATION             = "Water Ration";
+MERCH_FLAVOR_WATERRATION          = "NOTE: Taste depends on temperature.";

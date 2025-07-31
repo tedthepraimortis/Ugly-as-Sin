@@ -1,0 +1,4 @@
+
+server bool hdm_enable_messkit = true;
+server bool hdm_enable_foodration = true;
+server bool hdm_enable_waterration = true;
