@@ -88,7 +88,7 @@ addFlashlightHumanClass => { "name": "HDOperator" }
 
 addFlashlightOtherClass => { "name": "SatanRobo" }
 addFlashlightOtherClass => { "name": "Spiderdemon" }
-addFlashlightOtherClass => { "name": "Manticore" }
+addFlashlightOtherClass => { "name": "Balor" }
 
 // Merchant Store Entries
 newMerchantStoreItem => { "enabled": "#hdm_enable_ammopouch", "type": "item", "category": "$MERCH_CAT_AMMOPOUCH", "item": "UaS_AmmoPouch", "icon": "UGSPA0", "displayName": "$MERCH_TAG_AMMOPOUCH", "basePrice": "120", "flavorText": "$MERCH_FLAVOR_AMMOPOUCH" }

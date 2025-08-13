@@ -9,4 +9,4 @@ addFlashlightHumanClass => { "name": "HDOperator" }
 
 addFlashlightOtherClass => { "name": "SatanRobo" }
 addFlashlightOtherClass => { "name": "Spiderdemon" }
-addFlashlightOtherClass => { "name": "Manticore" }
+addFlashlightOtherClass => { "name": "Balor" }
